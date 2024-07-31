@@ -1,6 +1,6 @@
 # Linux Desktop VNC
 
-![GitHub action workflow status](https://github.com/SW-Luis-Palacios/base-linuxvnc/actions/workflows/docker-publish.yml/badge.svg)
+![GitHub action workflow status](https://github.com/AgorastisMesaio/docker-img-linuxvnc/actions/workflows/docker-publish.yml/badge.svg)
 
 This repository contains a `Dockerfile` aimed to create a *base image* to provide a Linux Desktop with VNC Server.
 
@@ -37,7 +37,7 @@ networks:
 
 services:
   ct_linuxvnc:
-    image: sw-luis-palacios/base-linuxvnc
+    image: agorastismesaio/docker-img-linuxvnc
     hostname: linuxvnc.company.com
     container_name: ct_linuxvnc
     ports:
@@ -141,7 +141,7 @@ If you copy or fork this project to create your own base image.
 To build the Docker image, run the following command in the directory containing the Dockerfile:
 
 ```sh
-docker build -t your-image/base-linuxvnc .
+docker build -t your-image/docker-img-linuxvnc .
 or
 docker compose up --build -d
 ```
@@ -149,5 +149,5 @@ docker compose up --build -d
 ### Troubleshoot
 
 ```sh
-docker run --rm --name ct_linuxvnc --hostname linuxvnc --shm-size 1g -p 5900:5900 -p 2222:22 -p 9001:9001 sw-luis-palacios/base-linuxvnc
+docker run --rm --name ct_linuxvnc --hostname linuxvnc --shm-size 1g -p 5900:5900 -p 2222:22 -p 9001:9001 agorastismesaio/docker-img-linuxvnc
 ```
