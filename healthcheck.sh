@@ -26,7 +26,7 @@ echo " Ok."
 
 # Test VNC port 5900
 echo -n "Test VNC"
-PORT=9090
+PORT=5900
 export ERR_MSG="Error testing VNC :${PORT}"
 /usr/bin/nc -w 3 -z ${HOSTNAME} ${PORT} > /dev/null 2>&1 || { ret=${?}; echo " - ${ERR_MSG}, return code: ${ret}"; exit ${ret}; }
 echo " Ok."
